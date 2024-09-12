@@ -1,0 +1,237 @@
+/* Reset margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styles for the body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative; /* Allows absolute positioning of the wrapper */
+    height: 100vh; /* Full viewport height */
+    background: linear-gradient(to bottom, #a2c2e1, #a2c2e1 50%, #f0f0f0 100%);
+}
+
+/* Basic styles for the header and navigation */
+header {
+    background-color: #fff; /* Change background color to white */
+    color: #000; /* Change font color to black */
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end; /* Align navigation to the right */
+    border-bottom: 1px solid #ccc; /* Add a 1px solid gray border at the bottom of the header */
+    position: fixed; /* Fix the header at the top of the page */
+    width: 100%; /* Full width */
+    top: 0; /* Align to the top */
+    left: 0;
+    z-index: 1000; /* Ensure it is above other content */
+}
+
+/* Ensure the header height is accounted for */
+body::before {
+    content: "";
+    display: block;
+    height: 50px; /* Height of the header */
+}
+
+/* Image Container */
+.half-screen-image {
+    position: absolute; /* Position relative to its containing block */
+    top: 60px; /* Move the image down from the top of the viewport, accounting for header */
+    left: 0.5cm; /* Move the image 0.5cm to the right */
+    width: calc(50vw - 0.5cm); /* Adjust width to accommodate the slight right shift */
+    height: calc(100vh - 60px); /* Full viewport height minus header height */
+    overflow: hidden;
+    z-index: 0; /* Ensure it is behind other content */
+}
+
+.half-screen-image img {
+    width: 100%;
+    height: 100%; /* Full height of the container */
+    object-fit: cover; /* Ensure the image covers the container */
+    border-radius: 8px;
+}
+
+/* Content Container */
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: calc(50vw - 0.5cm); /* Occupy the remaining width of the viewport minus the image offset */
+    margin-left: calc(50vw + 0.5cm); /* Shift content to the right of the image */
+    margin-top: 80px; /* Add space between the image and the content container */
+    padding-bottom: 20px; /* Extra padding to ensure scrollability */
+}
+
+/* Form Container */
+.form-container {
+    max-width: 400px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    margin: 20px; /* Margin for spacing around the form */
+}
+
+/* Image and Form Text */
+.image-text {
+    padding: 20px;
+    margin-bottom: 30px; /* Space between the heading and the input boxes */
+}
+
+/* Button Container */
+.button-container {
+    display: flex; /* Use flexbox to align buttons horizontally */
+    gap: 10px; /* Space between buttons */
+    justify-content: center; /* Center align the buttons */
+    margin-top: 20px;
+}
+
+/* Button Styles */
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 5% auto;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 8px; /* Consistent rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Registration Form Styles */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.input-container {
+    margin-bottom: 10px;
+}
+
+.input-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.input-container input:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Button Container */
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button-container button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button-container button:hover {
+    background-color: #45a049;
+}
+
+/* Password Strength Indicators */
+#password-strength-indicator,
+#confirm-password-strength-indicator {
+    height: 5px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Weak password strength */
+#password-strength-indicator.weak {
+    background: yellow;
+}
+
+/* Medium password strength */
+#password-strength-indicator.medium {
+    background: linear-gradient(to right, yellow, green);
+}
+
+/* Strong password strength */
+#password-strength-indicator.strong {
+    background: linear-gradient(to right, yellow, green, red);
+}
+
+#confirm-password-strength-indicator {
+    height: 5px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.password-error-message {
+    color: red;
+    display: none;
+}

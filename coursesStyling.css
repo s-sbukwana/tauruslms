@@ -1,0 +1,322 @@
+﻿/* Featured Courses Container */
+.featured-courses-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #f4f4f4; /* Light gray background to match other containers */
+}
+
+/* Featured Courses Wrapper */
+.featured-courses-wrapper {
+    background-color: #f4f4f4; /* White background for featured courses wrapper */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Carousel Container */
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* Carousel */
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+/* Carousel Items */
+.carousel-item {
+    min-width: 25%;
+    box-sizing: border-box;
+    padding: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for background color and scaling */
+    cursor: pointer; /* Indicate that items are clickable */
+    background-color: #f4f4f4; /* Light gray background to stand out from the container */
+    border-radius: 8px; /* Rounded corners for carousel items */
+}
+
+    .carousel-item:hover {
+        background-color: #e0e0e0; /* Slightly darker gray on hover */
+    }
+
+/* Card Styling */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+    .card img {
+        width: 80%; /* Adjust width as needed */
+        height: 150px; /* Adjust height as needed */
+        object-fit: cover; /* Ensure images fit well */
+        border-radius: 5px;
+    }
+
+/* Navigation Arrows */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+/* View All Button */
+.view-all {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Styling for Selected Carousel Item */
+.carousel-item.selected {
+    background-color: #ffebee; /* Light pink background for selected item */
+    transform: scale(1.05); /* Slightly larger scale for the selected item */
+}
+
+/* Course Information Container */
+.course-information-container {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9; /* Light gray for course information container to stand out */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+    .course-information-container .toggle-info {
+        display: none; /* Initially hide the button */
+        background-color: #4CAF50; /* Green background */
+        color: white; /* White text */
+        border: none;
+        padding: 10px 20px; /* Padding for the button */
+        border-radius: 5px; /* Rounded corners */
+        cursor: pointer;
+        position: absolute; /* Allows positioning within the container */
+        right: 30px; /* Increase space from the right edge of the container */
+        bottom: 30px; /* Increase space from the bottom edge of the container */
+        z-index: 10; /* Ensure the button appears on top of other content */
+    }
+
+/* Training Section */
+.training-section {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 40px; /* Space between training section and featured courses */
+}
+
+    .training-section h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .training-section p {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+.training-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    justify-content: flex-start;
+}
+
+.training-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    .training-btn:hover {
+        background-color: #45a049;
+    }
+
+/* Testing Container */
+.testing-container {
+    width: 100%; /* Full width of the viewport */
+    max-width: 1200px; /* Maximum width of the container */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px; /* Padding inside the container */
+    background-color: #f4f4f4; /* Light background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+.testing-section {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Arrange children in a column */
+    gap: 20px; /* Space between children */
+}
+
+/* Section Container */
+.section-container {
+    border: 2px solid #003d66; /* Darker blue border color */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside the container */
+    width: 1150px; /* Fixed width to match the testing-container */
+    height: 250px; /* Fixed height for the container */
+    margin: 0 auto; /* Center the container horizontally */
+    overflow: hidden; /* Add scrollbars if content overflows */
+    display: flex;
+}
+
+/* Flexbox Layout for Section Content */
+.section-content {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Vertically center items */
+    gap: 20px; /* Space between paragraph and image */
+    height: 100%; /* Ensure section-content takes full height of the container */
+}
+
+    .section-content p {
+        flex: 1; /* Allow paragraph to take available space */
+        margin: 0; /* Remove margin for better fit */
+        line-height: 1.5; /* Line height for readability */
+    }
+
+/* Styling for Section Image */
+.section-image {
+    height: 200px; /* Set the image height to fill the container */
+    width: 200px; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure image does not overflow container width */
+    border-radius: 8px; /* Rounded corners for the image */
+    object-fit: cover; /* Cover the container while maintaining aspect ratio */
+}
+
+/* Header Styling for e-Learning and Hybrid Sections */
+.testing-section h3 {
+    margin-top: 50px; /* Space above the header */
+    margin-bottom: 20px; /* Space below the header */
+    font-size: 24px; /* Font size for the header */
+    font-weight: bold; /* Bold font for emphasis */
+}
+
+/* Flexbox Layout for Paragraph and Buttons */
+.intro-paragraph {
+    margin: 0; /* Remove default margin */
+    font-size: 14px; /* Font size for paragraph */
+    color: #333; /* Updated text color */
+    line-height: 1.6; /* Improved readability */
+}
+
+/* Style the Detail Paragraph */
+.detail-paragraph {
+    margin: 0; /* Remove default margin */
+    font-size: 14px; /* Font size for paragraph */
+    color: #333; /* Updated text color */
+    line-height: 1.6; /* Improved readability */
+}
+
+/* Style for the Hybrid Learning Paragraph */
+.hybrid-paragraph {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    line-height: 1.6; /* Improve readability */
+    width: 100%; /* Ensure it fits within container width */
+    flex: 1; /* Allow paragraph to take available space */
+    color: #333; /* Updated text color */
+}
+
+/* Style for the Course Dropdown */
+.course-dropdown {
+    padding: 10px 40px 10px 20px; /* Adjust padding to fit the arrow */
+    font-size: 16px; /* Font size for dropdown text */
+    background-color: #007bff; /* Background color of the dropdown */
+    color: white; /* Text color inside the dropdown */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth background color transition */
+    appearance: none; /* Remove default appearance (for better styling) */
+    position: relative; /* Position relative for the arrow */
+    background-image: url('download.jpg'); /* Background image for the arrow */
+    background-repeat: no-repeat; /* Prevent repeating the background image */
+    background-position: right 10px center; /* Position the arrow */
+    background-size: 15px 10px; /* Size of the arrow image */
+}
+
+    /* Dropdown Arrow */
+    .course-dropdown::after {
+        content: ''; /* Add content for the arrow */
+        position: absolute; /* Position the arrow absolutely */
+        right: 10px; /* Space from the right edge */
+        top: 50%; /* Center vertically */
+        transform: translateY(-50%); /* Adjust position */
+        width: 15px; /* Width of the arrow */
+        height: 10px; /* Height of the arrow */
+        background: url('arrow-down.png') no-repeat center; /* Arrow image */
+        background-size: contain; /* Fit the image inside the element */
+    }
+
+/* General Styles for About Container */
+.about-container {
+    border-top: 2px solid #333; /* Top border */
+    border-bottom: 2px solid #333; /* Bottom border */
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    text-align: center;
+    background-color: #f4f4f4; /* Background color to match other containers */
+}
+
+    .about-container h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+.about-description {
+    font-size: 14px; /* Smaller font size for the paragraph */
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 100%; /* Ensure the paragraph spans the full width of the container */
+    text-align: justify; /* Justify text for better readability */
+    max-height: 15em; /* Ensure the paragraph spans at least 10 lines */
+    overflow: hidden; /* Ensure text is contained within the height limit */
+    padding-right: 1em; /* Add some padding to the right if text overflows */
+}
+
+.contact-info {
+    margin-top: 20px;
+    font-size: 16px;
+    text-align: left;
+}
+
+    .contact-info h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .contact-info p {
+        margin: 5px 0;
+    }

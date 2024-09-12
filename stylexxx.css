@@ -1,0 +1,425 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styling for the body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    background: linear-gradient(to bottom, #a2c2e1, #f0f0f0);
+    padding: 0;
+}
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3); /* Semi-transparent white background */
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    z-index: -1; /* Place behind other content */
+}
+
+header {
+    background: rgba(255, 255, 255, 0.3); /* Semi-transparent white background */
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end; /* Align navigation to the right */
+    border-bottom: 1px solid #ccc; /* Add a 1px solid gray border at the bottom of the header */
+}
+#top-nav1 {
+    margin-top: 10px; /* Adjust top margin for spacing */
+}
+
+nav1 ul {
+    list-style-type: none;
+    padding: 0; /* Remove default padding */
+}
+
+nav1 ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav1 ul li a {
+    color: #000; /* Change link color to black */
+    text-decoration: none;
+    padding: 5px 10px;
+    font-size: 10px; /* Reduce font size to 10px */
+    border-bottom: 2px solid transparent; /* Add transparent border initially */
+    transition: border-bottom-color 0.3s ease; /* Smooth transition for border color change */
+}
+
+nav1 ul li a:hover {
+    border-bottom-color: pink; /* Change border color to pink on hover */
+}
+
+/* Navigation bar styling*/
+nav {
+    background-color: #333;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-top: 2px solid rgba(0, 81, 255, 0.586); /* Top border */
+    border-bottom: 2px solid rgba(0, 81, 255, 0.586); /* Bottom border */
+    border-width: 0.5px;
+}
+
+.menu-bar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #4682B4; /* Background color of the menu bar */
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.menu-bar li {
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.menu-bar li a {
+    display: block;
+    color: #333; /* Text color */
+    text-align: center;
+    padding: 14px 20px; /* Padding inside each menu item */
+    text-decoration: none;
+}
+
+.menu-bar li a:hover {
+    background-color: lightpink; /* Background color on hover */
+}
+
+/* Dropdown container */
+.dropdown {
+    position: relative;
+}
+
+/* Dropdown button */
+.dropbtn {
+    display: block;
+    color: #333; /* Text color */
+    padding: 14px 20px; /* Padding inside each menu item */
+    text-decoration: none;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff; /* Background color of the dropdown */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Box shadow */
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: #333; /* Text color */
+    padding: 12px 16px; /* Padding inside each link */
+    display: block;
+    text-decoration: none;
+    border: 1px solid rgba(35, 40, 51, 0.586); /* Add border to each item */
+    border-radius: 5px; /* Rounded corners for each dropdown item */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    text-align: center; /* Center align the text */
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #f1f1f1; /* Background color on hover */
+}
+
+/* Show dropdown content on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Adjust login button */
+.login {
+    float: right; /* Float the login button to the right */
+}
+
+/* Style the login link */
+.login a {
+    display: block;
+    color: #333; /* Text color */
+    text-align: center;
+    padding: 14px 20px; /* Padding inside the login button */
+    text-decoration: none;
+}
+
+/* Container styling */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensures space between text and image */
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    background-color: #f0f0f0; /* Set background color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 45px;
+    border: 2px solid #003d66;
+}
+
+.content {
+    flex: 1;
+    text-align: left; /* Align text to the left */
+}
+
+.image {
+    max-width: 30%;
+    height: 350px;
+    margin-left: 20px; /* Space between content and image */
+    border-radius: 15px; /* Adjust the radius to make rounded edges */
+    object-fit: cover; /* Ensures the image covers the container while maintaining aspect ratio */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image {
+        margin-left: 0; /* Remove margin for smaller screens */
+        margin-top: 10px; /* Reduced space above image */
+        max-width: 80%; /* Adjusted width for smaller screens */
+    }
+}
+
+/* Style for the Try Us button */
+.tryButton {
+    display: inline-block; /* Ensure the button is an inline block */
+    padding: 15px 30px; /* Increase padding for a larger button */
+    font-size: 18px; /* Increase font size for better readability */
+    background-color: #b200ff; /* Dark background color */
+    color: black; /* White text color */
+    text-decoration: none; /* Remove underline from link */
+    border-radius: 8px; /* Rounded corners for the button */
+    border: none; /* Remove default border */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effect */
+    margin-left: 100px;
+}
+
+/* Hover effect for the button */
+.tryButton:hover {
+    background-color: hotpink; /* Change background color on hover */
+    transform: scale(1.05); /* Slightly scale up the button on hover */
+}
+
+/* Modal styling */
+.account {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.account-item {
+    text-align: center;
+    margin: 10px;
+    cursor: pointer;
+    background-color: #f0f0f0; /* Background color for account items */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.account-item p {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Items container styling */
+.items-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.Item {
+    flex: 1 1 30%;
+    background-color: #f0f0f0; /* Set background color */
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.Item h4 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.Item p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.Item a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.Item a:hover {
+    background-color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image {
+        margin-top: 20px;
+        flex: 1 1 auto;
+    }
+
+    .content,
+    .image {
+        width: 100%;
+    }
+
+    .modal-content {
+        width: 100%;
+    }
+
+    .items-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Item {
+        width: 100%;
+    }
+}
+
+.cropped-image {
+    width: 70px; /* Adjust width as needed */
+    height: 70px; /* Adjust height as needed */
+    background-image: url('bookonTable.jpg');
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the image */
+}
+
+#UserAccounts {
+    display: flex;
+    justify-content: center; /* Centers items horizontally */
+}
+
+.account-item {
+    text-align: center;
+    padding: 10px;
+    cursor: pointer; /* Change cursor to pointer on hover */
+    margin: 0 10px; /* Adjust spacing between items */
+    border-radius: 5px; /* Rounded corners for hover effect */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
+}
+
+.account-item:hover {
+    background-color: #f0f0f0; /* Light grey background on hover */
+}
+
+.account-item.active {
+    background-color: #cce6ff; /* Example of active/selectable item */
+}
+
+#popupModal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent background */
+    z-index: 1000; /* ensure it's on top of other content */
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.modal-title {
+    margin-top: 0;
+}
+
+.modal-subtitle {
+    margin-bottom: 20px;
+}
+
+.account-item.selected {
+    background-color: #f0f0f0;
+    border-color: #999;
+}
+
+/* Basic styling for the modal */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: auto;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

@@ -1,0 +1,53 @@
+﻿Cyber Security Course
+
+Course Overview:
+The Cyber Security course is designed to provide you with the skills and knowledge needed to protect information systems from cyber threats. As digital threats evolve, professionals with expertise in cyber security are crucial for safeguarding sensitive data and maintaining system integrity.
+
+Key Topics Covered:
+1. **Introduction to Cyber Security**
+   - Fundamentals of cyber security and risk management
+   - Understanding various types of cyber threats and attacks
+   - Overview of cyber security principles and practices
+
+2. **Network Security**
+   - Securing network infrastructures and communications
+   - Implementing firewalls, VPNs, and intrusion detection systems
+   - Network monitoring and incident response
+
+3. **Ethical Hacking and Penetration Testing**
+   - Techniques for ethical hacking and vulnerability assessment
+   - Conducting penetration tests to identify and exploit vulnerabilities
+   - Tools and methodologies for effective penetration testing
+
+4. **Data Protection and Encryption**
+   - Understanding encryption technologies and protocols
+   - Implementing data protection measures and secure storage practices
+   - Managing cryptographic keys and data access controls
+
+5. **Cyber Security Policies and Compliance**
+   - Developing and enforcing security policies and procedures
+   - Understanding regulatory requirements and compliance standards
+   - Managing risk assessments and security audits
+
+6. **Incident Response and Recovery**
+   - Responding to and managing security incidents and breaches
+   - Implementing incident response plans and recovery strategies
+   - Analyzing and learning from security incidents
+
+7. **Emerging Threats and Technologies**
+   - Staying current with the latest cyber threats and attack vectors
+   - Exploring new technologies and their implications for cyber security
+   - Adapting to evolving cyber security challenges and solutions
+
+Course Features:
+- **Expert Instruction:** Learn from seasoned professionals with real-world experience in cyber security.
+- **Practical Labs:** Engage in hands-on labs and simulations to apply theoretical knowledge.
+- **Certification Preparation:** Prepare for industry-recognized certifications in cyber security.
+- **Career Advancement:** Gain skills essential for roles in network security, ethical hacking, and information protection.
+
+Who Should Enroll:
+This course is ideal for IT professionals, security analysts, and anyone interested in pursuing a career in cyber security. It’s suitable for both beginners seeking to enter the field and experienced professionals looking to enhance their skills.
+
+Enroll today to gain expertise in protecting digital assets and securing information systems!
+
+For more information and to register, visit our [Course Catalog](#course-catalog).
